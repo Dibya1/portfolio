@@ -1,0 +1,319 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'ubutu', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    display: flex;
+}
+
+.navigation{
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background-color: rgb(75, 75, 146);
+    border-left: 10px solid rgb(75, 75, 146) ;
+    transition: 0.5s;
+    overflow:hidden;
+}
+
+.navigation.active{
+    width: 80px;
+}
+
+.navigation ul{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+}
+
+.navigation ul li{
+    position: relative;
+    width:200%;
+    list-style: none;
+
+}
+
+.navigation ul li:nth-child(1){
+    margin-bottom: 40px;
+    pointer-events: none;
+}
+
+.navigation ul li:hover{
+    background-color:#fff;
+    color: rgb(75, 75, 146);
+}
+
+.navigation ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: #fff;
+}
+.navigation ul li:hover a{
+    color: rgb(75, 75, 146);
+}
+
+.navigation ul li a .icon{
+    position: relative;
+    min-width: 60px;
+    line-height: 70px;
+    text-align: center;
+    display: block;
+}
+.navigation ul li a .icon ion-icon{
+    font-size: 1.75em;
+}
+.navigation ul li a .title{
+    position: relative;
+    height: 60px;
+    line-height: 60px;
+    display: block;
+    padding:0  10px;
+
+}
+
+/* main */
+.main{
+    position: absolute;
+    width:calc(100% - 300px);
+    left:300px;
+    min-height: 100vh;
+    transition: 0.5s;
+}
+.main.active{
+    width:calc(100% - 80px);
+    left:80px;
+}
+.topbar{
+    width:100%;
+    position:fixed;
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    background-color: gray;
+}
+
+.toggle{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    font-size: 2.4em;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.topbar img{
+    width:50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+
+
+
+/* details */
+.details{
+    width:100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 30px;
+    padding: 10px;
+    
+}
+
+.bar{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+.bar h2{
+    position: relative;
+    font-size: 1.4em;
+    font-weight: 300;
+    color: rgb(75, 75, 146);
+}
+.bar button{
+    position: relative;
+    background-color: rgb(75, 75, 146);
+    color: #fff;
+    padding:10px;
+    border-radius: 20px;
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+
+#home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    height:100vh;
+    background-image: url("back.png");
+}
+
+.name h1{
+    font-size: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.name h2{
+    font-size:30x;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: yellowgreen
+}
+#education{
+    height:100vh;
+    padding: 10px;
+    justify-content: baseline;
+}
+#edu {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 50px;
+  }
+  
+  #edu td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #edu tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #edu tr:hover {background-color: #ddd;}
+  
+  #edu th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+  }
+  #project{
+      height:100vh;
+  }
+
+  .profile-pic{
+      width:100px;
+      height: 100px;
+      border-radius:50%;
+  }
+
+  #contacts{
+      background-color: gray;
+      color: white;
+      padding: 30px;
+      margin-top: 50px;
+  }
+
+  .contact-media a span ion-icon{
+      font-size: 4em;
+  }
+  #resume{
+      
+      
+      
+      display: flex;
+      min-height: 100vh;
+      width: 100%;
+  }
+
+  .resumepic{
+      width: 50%;
+      height:200px;
+      border:1px solide red;
+      margin-top: 200px;
+      
+  }
+  .resumepic img{
+      width:200px;
+      height:300px;
+      object-fit: cover;
+  }
+  .resumepic :hover{
+      width: 400px;;
+      height: auto;
+  }
+  .btn_area{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      
+  }
+  .btn_area a img{
+      width:200px;
+      height: 60px;
+      object-fit: cover;
+  }
+  .contact-detail{
+      margin-top: 100px;
+      height: 100vh;
+  }
+  .address{
+      display: flex;
+      
+  }
+  .address div{
+      width:30%;
+      box-shadow: 2px 2px 4px black;
+      padding:5px;
+      margin-right: 20px;
+  }
+  
+  .address div span ion-icon{
+      font-size:2em;
+  }
+  .follow{
+      margin-top: 100px;
+  }
+  .project{
+      margin-top: 100px;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+  }
+/* responsive */
+@media (max-width: 991px){
+    .navigation{
+        left: -300px;
+        width: 200px;
+
+    }
+    .navigation.active{
+        left:0;
+        width: 300px;
+    }
+    .main{
+        width:100%;
+        left:0;
+    }
+    .main.active{
+        left:300px;
+    }
+   
+    .details{
+        grid-template-columns: 1fr;
+    }
+}
